@@ -10,6 +10,7 @@ export class AppComponent {
   date: string;
   amount: number;
   rate: number;
+  miles: number;
 
   onNameChange(value: string){
     this.name = value;
@@ -25,5 +26,9 @@ export class AppComponent {
 
   onRateChange(value: string){
     this.rate = parseFloat(value);
+  }
+
+  onMilesChange(value: string){
+    this.miles = parseFloat(value);
   }
 }
