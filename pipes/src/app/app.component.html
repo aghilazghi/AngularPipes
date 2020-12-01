@@ -1,0 +1,60 @@
+<div class="container">
+
+  <h3>Payment Form</h3>
+
+  <div class="row">
+    <div class="form-group col">
+      <label><b>Payee Name</b></label>
+      <input class="form-control" type="text" (input)="onNameChange($event.target.value)">
+    </div> 
+    <div class="col">
+      <label><b>Name</b></label>
+      <div>
+        {{ name | titlecase }}
+      </div>
+    </div>  
+  </div>
+
+    <div class="row">
+      <div class="form-group col">
+        <label><b>Payment Date</b></label>
+        <input type="date" class="form-control" type="text" (input)="onDateChange($event.target.value)">
+      </div>
+      <div class="col">
+        <label><b>Payment Date</b></label>
+        <div>
+          {{ date | date: "MMMM d, y" }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col">
+        <label><b>Payment Amount</b></label>
+        <input class="form-control" type="text" (input)="onAmountChange($event.target.value)">
+      </div>
+      <div class="col">
+        <label><b>Payment Amount</b></label>
+        <div>
+          {{ amount | currency }}
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col">
+        <label><b>Commission Rate</b></label>
+        <input class="form-control" type="text" (input)="onRateChange($event.target.value)">
+      </div>
+      <div class="col">
+        <label><b>Commission Rate</b></label>
+        <div>
+          {{ rate | number: "1.2-2"}}
+        </div>
+      </div>
+    </div>
+
+</div>
+
+
+
